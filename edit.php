@@ -53,21 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["update_task"])) {
     } else {
         echo '<script>alert("Error Occurs!! Update failed:");</script>';
     }
-}
-
-if (isset($_POST['delete_task'])) {
-    $tsk_id_to_delete = $_POST["tsk_id"]; // Get the tsk_id from the form
-
-    $delete_sql = "DELETE FROM add_task WHERE tsk_id = '$tsk_id_to_delete'";
-    $delete_result = mysqli_query($conn, $delete_sql);
-
-    if ($delete_result) {
-        header("Location: view.php");
-        exit();
-    } else {
-        echo '<script>alert("Deletion failed:");</script>';
-    }
-}   
+} 
 
 ?>
 
@@ -302,7 +288,6 @@ if (isset($_POST['delete_task'])) {
                 <input type="date" name="new_st_date" class="edit-input" value="<?php echo htmlspecialchars($st_date); ?>" required>
                 <input type="date" name="new_end_date" class="edit-input" value="<?php echo htmlspecialchars($end_date); ?>" required><br><br>
                 <button type="submit" class="edit-button" name="update_task" value="update_task">Update Task</button>
-                <button type="submit" name="delete_task" class="edit-button" value="delete_task">Delete Task</button>
             </form>
         </div>
     </div>

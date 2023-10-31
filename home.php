@@ -42,12 +42,6 @@ if (isset($_SESSION["username"])) {
                 </div>
                 <div class="nav-items">
                     <div>
-                    <?php
-                    if (!empty($loggedInUsername)) {
-                        // Display the username in the navbar if the user is logged in
-                        echo 'Welcome, ' . htmlspecialchars($loggedInUsername) . '!';
-                    }
-                    ?>
                     </div>
                     <div><a href="#Features">Features</a></div>
                     <div><a href="#skills">About US</a></div>
@@ -65,7 +59,13 @@ if (isset($_SESSION["username"])) {
 
                 <div class="faded-text"">Taskiverse</div>
                 <div class="hero-section-left">
-                    <div class="hero-section-heading">Hi! "Welcome to the taskiverse, 
+                    <div class="hero-section-heading">Hi,
+                    <?php
+                    if (!empty($loggedInUsername)) {
+                        // Display the username in the navbar if the user is logged in
+                        echo htmlspecialchars($loggedInUsername) . '!';
+                    }
+                    ?> "Welcome to the taskiverse, 
                         where your to-dos become cosmic triumphs."</div>
                     <div class="hero-section-heading hero-section-sub-heading">
                         You Can <span class="role"></span>

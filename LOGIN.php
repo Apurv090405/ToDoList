@@ -19,18 +19,26 @@
         body {
             margin: 0;
             padding: 0;
+			background-color: rgb(253, 249, 249);
             font-family: sans-serif;
             background: url() no-repeat;
             background-size: cover;
         }
 
 .login-box {
-	width: 280px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: #191970;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 550px;
+    background-color: #fff;
+	border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 50px;
+    animation: fade-in 1s ease-in-out;
+    margin: 130px auto;
 }
 
 .login-box h1 {
@@ -131,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Store the username in a session variable
                 session_start();
                 $_SESSION["username"] = $username;
-                header("Location: home.php");
+                header("Location: home.php");	
                 exit();
         }
         else {

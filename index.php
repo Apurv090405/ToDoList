@@ -19,6 +19,7 @@
         /* Add your CSS styles here */
         body {
             margin: 0;
+            background-color: rgb(253, 249, 249);
             padding: 0;
             font-family: sans-serif;
             background: url() no-repeat;
@@ -26,13 +27,19 @@
         }
 
         .register-container {
-            max-width: 600px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            max-width: 550px;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: #191970;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 50px;
+            animation: fade-in 1s ease-in-out;
+            margin: 130px auto;
         }
 
         .register-container h2 {
