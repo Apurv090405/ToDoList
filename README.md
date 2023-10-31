@@ -85,7 +85,3 @@ This project is licensed under the [MIT License](LICENSE.md).
 For any questions or inquiries related to Taskiverse, please contact the project manager, Apurv Chudasama, at apurvchudasama.edu@gmail.com.
 
 ---
-
-Feel free to customize this README file to match your project's specific details. This Markdown template can be directly used in your GitHub repository.
-
-
